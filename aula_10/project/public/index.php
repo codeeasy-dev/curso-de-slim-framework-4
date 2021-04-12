@@ -11,6 +11,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
+$app->setBasePath('');
+
 $app->post('/rota01', function (Request $request, Response $response): Response {
     $data = $request->getParsedBody();
 

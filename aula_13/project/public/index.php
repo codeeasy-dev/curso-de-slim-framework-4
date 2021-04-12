@@ -12,6 +12,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
+$app->setBasePath('');
+
 $myMiddleware = function (Request $request, RequestHandler $handler): Response {
     $response = $handler->handle($request);
     $existingContent = (string) $response->getBody();

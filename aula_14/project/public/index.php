@@ -11,6 +11,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
+$app->setBasePath('');
+
 $app->add(new CorsMiddleware());
 
 $app->get('/', function (Request $request, Response $response, array $args): Response {

@@ -10,6 +10,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
+$app->setBasePath('');
+
 $routeCollector = $app->getRouteCollector();
 $routeCollector->setCacheFile(__DIR__ . '/cache.php');
 

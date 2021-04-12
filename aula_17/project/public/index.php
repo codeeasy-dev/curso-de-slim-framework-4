@@ -16,6 +16,8 @@ AppFactory::setContainer($container);
 
 $app = AppFactory::create();
 
+$app->setBasePath('');
+
 $app->get('/', ProductsController::class . ':get');
 
 $app->run();

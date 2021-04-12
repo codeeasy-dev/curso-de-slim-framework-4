@@ -10,6 +10,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
+$app->setBasePath('');
+
 $app->get('/products', ProductsController::class . ':get');
 $app->post('/product', ProductsController::class . ':store');
 
