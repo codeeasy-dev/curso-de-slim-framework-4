@@ -15,6 +15,10 @@ $app = AppFactory::create();
 
 $app->setBasePath('');
 
+$app->addRoutingMiddleware();
+
+$app->addErrorMiddleware(true, true, true);
+
 $myMiddleware = function (Request $request, RequestHandler $handler): Response {
     $response = $handler->handle($request);
     $existingContent = (string) $response->getBody();
